@@ -13,7 +13,7 @@ linux_hints
 - Установка времени (если нет ntp-сервера)
 
 ```sh
-				date -s 17:00:00
+			date -s 17:00:00
 ```
 
 ### setfacl
@@ -21,55 +21,55 @@ linux_hints
 - Добавление\изменение acl-правила для пользователя
 
 ```sh
-				setfacl -m u:uname:rX file_name
+			setfacl -m u:uname:rX file_name
 ```
 
 - Добавление\изменеие acl-правила для группы
 
 ```sh
-				setfacl -m g:gname:rw file_name
+			setfacl -m g:gname:rw file_name
 ```
 
 - Добавление\изменение acl-правила для остальных
 
 ```sh
-				setfacl -m o::- file_name
+			setfacl -m o::- file_name
 ```
 
 - Добавление\изменение нескольких правил
 
 ```sh
-				setfacl -m u::rwx,g:students:rX,o::- file_name
+			setfacl -m u::rwx,g:students:rX,o::- file_name
 ```
 
 - Копирование acl-правил с одного файла и применение их для другого
 
 ```sh
-				getfacl file_name1 | setfacl --set-file=- file_name2
+			getfacl file_name1 | setfacl --set-file=- file_name2
 ```
 
 - Настройка маски acl-правил для файла (запрет не явного изменения маски)
 
 ```sh
-				setfacl -m m::r[n] file_name
+			setfacl -m m::r[n] file_name
 ```
 
 - Рекурсивное задание acl-правила для всех вложений директории
 
 ```sh
-				setfacl -R u:uname:rX dir_name
+			setfacl -R u:uname:rX dir_name
 ```
 
 - Удаление acl-правил для заданного пользователя
 
 ```sh
-				setfacl -x u:uname file_name
+			setfacl -x u:uname file_name
 ```
 
 - Удаление acl-правил для заданной группы
 
 ```sh
-				setfacl -x g:gname file_name
+			setfacl -x g:gname file_name
 ```
 
 
