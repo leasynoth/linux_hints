@@ -72,6 +72,29 @@ linux_hints
 			setfacl -x g:gname file_name
 ```
 
+- Добавление acl-правила 'по-умолчанию'
+
+```sh
+			setfacl -m d:u:uname:rx dir_name
+```
+
+- Удаление acl-правила 'по-умолчанию'
+
+```sh
+			setfacl -x d:u:uname dir_name
+```
+
+- Удаление всех acl-правил 'по-умолчанию'
+
+```sh
+			setfacl -k /dir_name
+```
+
+- Удаление acl-каталога
+
+```sh
+			setfacl -b /dir_name
+```
 
 Лицензионное соглашение
 ------
