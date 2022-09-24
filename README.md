@@ -4,16 +4,16 @@ linux_hints
 ======
 {tested of centOS v.7}
 
-Overview
+Описание
 ------ 
-Examples of using linux commands for personal use:
+Примеры использования команд Linux в личных целях:
 
-**date**
+#### date
 
 Установка времени (если нет ntp-сервера)
 
-date -s 17:00:00
+```date -s 17:00:00```
 
-License
+Лицензионное соглашение
 ------
-This software is free to use under the **MIT** license.
+Эту справочную информацию можно использовать бесплатно по лицензии **MIT**.
