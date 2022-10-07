@@ -96,6 +96,26 @@ linux_hints
 			setfacl -b /dir_name
 ```
 
+### systemctl
+
+- Проверка режима запуска X-ов при старте системы
+
+```sh
+			systemctl get-default
+```
+
+- Включение X-ов при запуске системы
+
+```sh
+			systemctl set-default graphical.target
+```
+
+- Отключение X-ов при запуске системы
+
+```sh
+			systemctl set-default multi-user.target
+```
+
 Лицензионное соглашение
 ------
 Эту справочную информацию можно использовать бесплатно по лицензии **MIT**.
