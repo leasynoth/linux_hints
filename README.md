@@ -16,6 +16,24 @@ linux_hints
 			date -s 17:00:00
 ```
 
+- Текущая дата
+
+```sh
+			date +%D
+```
+
+- Текущее время
+
+```sh
+			date +%R
+```
+
+- Текущая дата +90 дней
+
+```sh
+			date -d "+90 days"
+```
+
 ### setfacl
 
 - Добавление\изменение acl-правила для пользователя
@@ -114,6 +132,72 @@ linux_hints
 
 ```sh
 			systemctl set-default multi-user.target
+```
+
+- Поиск конкретного сервиса в системе
+
+```sh
+			systemctl -at service | grep postgresql
+```
+
+- Посмотреть все доступные цели в системе
+
+```sh
+			systemctl -at target
+```
+
+- Посмотреть состояние сервиса
+
+```sh
+			systemctl status nginx
+```
+
+- Запуск [остановка,перезапуск,перезагрузка] сервиса
+
+```sh
+			systemctl start[stop,restart,reload] httpd
+```
+
+- Посмотреть список юнитов от которых зависит сервис
+
+```sh
+			systemctl list-dependencies crond
+```
+
+- Посмотреть список юнитов которые зависят от сервиса
+
+```sh
+			systemctl list-dependencies crond --reverse
+```
+
+- Установить [снять] пометку полной недоступности сервиса
+
+```sh
+			systemctl mask[unmask] crond
+```
+
+- Включение [отключение] автозапуска сервиса
+
+```sh
+			systemctl enable[disable] crond
+```
+
+- Посмотреть свойства сервиса
+
+```sh
+			systemctl show nginx
+```
+
+- Выключение [перезапуск] системы
+
+```sh
+			systemctl poweoff[reboot]
+```
+
+- Посмотреть все установленные в системе цели
+
+```sh
+			systemctl -at list-unit-files
 ```
 
 Лицензионное соглашение
